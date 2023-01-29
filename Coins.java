@@ -5,6 +5,7 @@ public class Coins
 {
 	public static void calculate(int val,int[] arr)
 	{
+		int sum=0;
 		int l=arr.length;
 		for(int i=l-1;i>=0;i--)
 		{
@@ -12,7 +13,9 @@ public class Coins
 			temp=val/arr[i];
 			System.out.println(arr[i]+": "+temp);
 			val=val-(temp*arr[i]);
+			sum=sum+temp;
 		}
+		System.out.println("Minimum number of coins required: "+sum);
 	}
 	public static void main(String args[])
 	{
